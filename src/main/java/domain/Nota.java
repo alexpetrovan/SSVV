@@ -34,11 +34,10 @@ public class Nota implements HasID<Pair<String, String>> {
     @Override
     public String toString() {
         return "Nota{" +
-                "id_student = " + idNota.getObject1() +
-                ", id_tema = " + idNota.getObject2() +
-                ", nota = " + nota +
-                ", saptamanaPredare = " + saptamanaPredare +
-                ", feedback = '" + feedback + '\'' +
-                '}';
+                "id_student=" + idNota.getObject1() +
+                ", id_tema=" + idNota.getObject2() +
+                ", nota=" + nota +
+                ", saptamanaPredare=" + saptamanaPredare +
+                ", feedback=" + feedback + '}';
     }
 }

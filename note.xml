@@ -5,6 +5,11 @@
         <SaptamanaPredare>7</SaptamanaPredare>
         <Feedback>done</Feedback>
     </nota>
+    <nota IDStudent="4" IDTema="4">
+        <Nota>1.0</Nota>
+        <SaptamanaPredare>8</SaptamanaPredare>
+        <Feedback>done</Feedback>
+    </nota>
     <nota IDStudent="1" IDTema="2">
         <Nota>7.5</Nota>
         <SaptamanaPredare>9</SaptamanaPredare>
