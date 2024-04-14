@@ -3,7 +3,6 @@ package org.example;
 import domain.Tema;
 import org.junit.Test;
 import repository.TemaRepository;
-import repository.TemaXMLRepository;
 
 import validation.TemaValidator;
 import validation.Validator;
@@ -24,7 +23,7 @@ public class TestAssignments {
     }
 
     @Test
-    public void testAddAssignmentInvalidStartEndDate(){
+    public void testAddAssignmentInvalidStartDate(){
         repo.save(new Tema("1", "Empty", 12, 13));
         assertNull("Verifying assignment with invalid start date", repo.findOne("1"));
     }
@@ -63,5 +62,11 @@ public class TestAssignments {
     public void testAddAssignmentDescriptionEmpty(){
         repo.save(new Tema("2", "", 15, 12));
         assertNull("Verifying assignment with invalid start date", repo.findOne("2"));
+    }
+
+    @Test
+    public void testAddAssignmentInvalidId(){
+        repo.save(new Tema("", "Description", 12, 13));
+        assertNull("Verifying assignment with invalid id", repo.findOne(""));
     }
 }
