@@ -31,26 +31,26 @@ public class TestAssignments {
 
     @Test
     public void testAddAssignmentInvalidStartDateTooSmall(){
-        repo.save(new Tema("1", "Empty", 12, 0));
-        assertNull("Verifying assignment with invalid start date", repo.findOne("1"));
+        repo.save(new Tema("2", "Homework", 12, 0));
+        assertNull("Verifying assignment with invalid start date", repo.findOne("2"));
     }
 
     @Test
     public void testAddAssignmentInvalidStartDateTooBig(){
-        repo.save(new Tema("1", "Empty", 12, 15));
+        repo.save(new Tema("3", "Nothing", 12, 15));
         assertNull("Verifying assignment with invalid start date", repo.findOne("1"));
     }
 
     @Test
     public void testAddAssignmentInvalidEndDateTooSmall(){
-        repo.save(new Tema("1", "Empty", 0, 2));
+        repo.save(new Tema("1", "FrontEnd", 0, 2));
         assertNull("Verifying assignment with invalid start date", repo.findOne("1"));
     }
 
     @Test
     public void testAddAssignmentInvalidEndDateTooBig(){
-        repo.save(new Tema("1", "Empty", 15, 12));
-        assertNull("Verifying assignment with invalid start date", repo.findOne("1"));
+        repo.save(new Tema("2", "Array", 15, 12));
+        assertNull("Verifying assignment with invalid start date", repo.findOne("2"));
     }
 
     @Test
@@ -61,7 +61,7 @@ public class TestAssignments {
 
     @Test
     public void testAddAssignmentDescriptionEmpty(){
-        repo.save(new Tema("1", "", 15, 12));
-        assertNull("Verifying assignment with invalid start date", repo.findOne("1"));
+        repo.save(new Tema("2", "", 15, 12));
+        assertNull("Verifying assignment with invalid start date", repo.findOne("2"));
     }
 }
