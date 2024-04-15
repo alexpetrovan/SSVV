@@ -29,13 +29,13 @@ public class TestStudents {
     @Test
     public void testAddStudentInvalidId(){
         repo.save(new Student("", "Johnny", 123));
-        assertNull("Verifying student with invalid group", repo.findOne(""));
+        assertNull("Verifying student with invalid id", repo.findOne(""));
     }
 
     @Test
     public void testAddStudentInvalidName(){
         repo.save(new Student("1", "", 123));
-        assertNull("Verifying student with invalid group", repo.findOne("1"));
+        assertNull("Verifying student with invalid name", repo.findOne("1"));
     }
 
     @Test public void testAddStudentValidGroupBoundaries(){
